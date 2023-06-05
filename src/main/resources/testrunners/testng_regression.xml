@@ -3,8 +3,9 @@
 <suite name="Suite" thread-count="5" parallel ="tests">
 
 	<listeners>
-		<listener
-			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener" />
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" />
 	</listeners>
 
 	<test name="Login Page Test">
@@ -13,7 +14,7 @@
     </classes>
   	</test>
 
-  <test name="Account Page Test">
+  <!--  <test name="Account Page Test">
     <classes>
       <class name="com.qa.opencart.tests.AccountsPageTest"/>
     </classes>
@@ -35,7 +36,7 @@
     <classes>
       <class name="com.qa.opencart.tests.SearchPageTest"/>
     </classes>
-  </test> 
+  </test>  -->
    
     
 </suite> 

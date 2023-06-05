@@ -26,7 +26,8 @@ public class DriverFactory
 	public WebDriver intializeDriver(Properties prop)
 	{
 		//String browserName = prop.getProperty("browser");
-		String browserName = System.getProperty("browser");
+		//String browserName = System.getProperty("browser");
+		String browserName = "edge";
 		String url = prop.getProperty("url");
 		
 		bo = new BrowserOptionsManager(prop);
@@ -59,7 +60,8 @@ public class DriverFactory
 		Properties prop = new Properties();
 		try
 		{
-		String environment = System.getProperty("env");
+		//String environment = System.getProperty("env");
+		String environment = "qa";
 		System.out.println("Environment provided by user = " +environment);
 		switch(environment)
 		{

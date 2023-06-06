@@ -26,13 +26,20 @@ public class DriverFactory
 	public WebDriver intializeDriver(Properties prop)
 	{
 		//String browserName = prop.getProperty("browser");
-		//String browserName = System.getProperty("browser");
-		String browserName = "edge";
+		String browserName = System.getProperty("browser");
+		
+		//if user has not provided browser , use edge browser by default
+		if(browserName == null)
+		{
+			browserName = "firefox";
+		}
+		
+		System.out.println("Considering browser =" +browserName);
+		
 		String url = prop.getProperty("url");
 		
 		bo = new BrowserOptionsManager(prop);
 				
-		System.out.println("Browser received = " +browserName);
 		switch(browserName.toLowerCase())
 		{
 		case "chrome":  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shilps\\.cache\\selenium\\chromedriver\\win32\\112.0.5615.49\\chromedriver.exe");
@@ -60,9 +67,16 @@ public class DriverFactory
 		Properties prop = new Properties();
 		try
 		{
-		//String environment = System.getProperty("env");
-		String environment = "qa";
-		System.out.println("Environment provided by user = " +environment);
+		String environment = System.getProperty("env");
+		
+		//check if user has not provided any value. If not provided, use default value
+		if(environment == null)
+		{
+			environment = "qa";
+		}
+				
+		System.out.println("Considering environemnt = " +environment);
+		
 		switch(environment)
 		{
 			case "qa": fip = new FileInputStream("./src/main/resources/config/QA_Config.properties");

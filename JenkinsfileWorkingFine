@@ -39,7 +39,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/shravges/OpenCartPOMFramework.git'
-                    bat "mvn clean test -Dbrowser=${browserName} -Denv=${env} -Dsurefire.suiteXmlFiles=src/main/resources/testrunners/testng_regression.xml"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/testrunners/testng_regression.xml"
                     
                 }
             }
@@ -83,7 +83,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/shravges/OpenCartPOMFramework.git'
-                    bat "mvn clean test -Dbrowser=${browserName} -Denv=${env} -Dsurefire.suiteXmlFiles=src/main/resources/testrunners/testng_sanity.xml"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/testrunners/testng_sanity.xml"
                     
                 }
             }

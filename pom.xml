@@ -82,7 +82,6 @@
 				</configuration>
 			</plugin>
 
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -93,11 +92,8 @@
 					<reuseForks>true</reuseForks>
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/main/resources/testrunners/testng_regression.xml</suiteXmlFile>
-					</suiteXmlFiles>
-
-					
-
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+					</suiteXmlFiles>				
 				</configuration>
 				
 					<dependencies>
@@ -107,8 +103,6 @@
 						<version>${aspectj.version}</version>
 					</dependency>
 				</dependencies>
-
-				
 
 			</plugin>
 		</plugins>

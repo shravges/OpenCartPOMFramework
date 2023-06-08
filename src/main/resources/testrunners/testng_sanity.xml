@@ -14,13 +14,13 @@
     </classes>
   	</test>
 
-    <test name="Account Page Test">
+  <!--  <test name="Account Page Test">
     <classes>
       <class name="com.qa.opencart.tests.AccountsPageTest"/>
     </classes>
   </test> 
   
-  <!-- <test name="Register User Page Test">
+  <test name="Register User Page Test">
     <classes>
       <class name="com.qa.opencart.tests.RegisterUserPageTest"/>
     </classes>

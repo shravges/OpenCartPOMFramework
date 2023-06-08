@@ -31,7 +31,7 @@ public class DriverFactory
 		//if user has not provided browser , use edge browser by default
 		if(browserName == null)
 		{
-			browserName = "firefox";
+			browserName = "edge";
 		}
 		
 		System.out.println("Considering browser =" +browserName);

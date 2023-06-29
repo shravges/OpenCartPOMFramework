@@ -1,14 +1,14 @@
 package com.qa.opencart.tests;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.utils.AppConstants;
 
+@Listeners({com.qa.opencart.listeners.TestAllureListener.class})  
 public class LoginPageTest extends BaseTest
 {
 	
